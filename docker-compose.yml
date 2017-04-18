@@ -1,0 +1,21 @@
+version: '2'
+services:
+  wordpress:
+    image: wordpress:4.7.3-php7.0-apache
+    ports: 
+      - "127.0.0.1:3000:80"
+    volumes:
+      - ./wordpress:/var/www/html
+    links:
+      - wordpressDB:mysql  
+    environment:
+      WORDPRESS_DB_PASSWORD: root  
+    depends_on:
+      - wordpressDB
+  wordpressDB:
+    image: mysql
+    volumes:
+      - ./database:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root          
+
