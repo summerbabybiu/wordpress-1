@@ -564,3 +564,19 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+ 
+function my_avatar($avatar) {
+	$tmp = strpos($avatar, 'http');
+	$g = substr($avatar, $tmp, strpos($avatar, "'", $tmp) - $tmp);
+	$tmp = strpos($g, 'avatar/') + 7;
+	$f = substr($g, $tmp, strpos($g, "?", $tmp) - $tmp);
+	$w = get_bloginfo('wpurl');
+	$e = ABSPATH .'avatar/'. $f .'.jpg';
+	$t = 1209600; //設定14天, 單位:秒
+	if ( !is_file($e) || (time() - filemtime($e)) &gt; $t ) { //當頭像不存在或文件超過14天才更新
+		copy(htmlspecialchars_decode($g), $e);
+	} else $avatar = strtr($avatar, array($g =&gt; $w.'/avatar/'.$f.'.jpg'));
+	if (filesize($e) &lt; 500) copy($w.'/avatar/default.jpg', $e);
+	return $avatar;
+}
+add_filter('get_avatar', 'my_avatar');
