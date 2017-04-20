@@ -37,9 +37,6 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-define('FORCE_SSL_ADMIN', true);//后台强制加密
-define('FORCE_SSL_LOGIN', true);//登录强制加密
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
