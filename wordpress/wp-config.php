@@ -1,95 +1,96 @@
 <?php
 /**
- * The base configuration for WordPress
+ * WordPress基础配置文件。
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * 这个文件被安装程序用于自动生成wp-config.php配置文件，
+ * 您可以不使用网站，您需要手动复制这个文件，
+ * 并重命名为“wp-config.php”，然后填入相关信息。
  *
- * This file contains the following configurations:
+ * 本文件包含以下配置选项：
  *
- * * MySQL settings
- * * Secret keys
- * * Database table prefix
+ * * MySQL设置
+ * * 密钥
+ * * 数据库表名前缀
  * * ABSPATH
  *
- * @link https://codex.wordpress.org/Editing_wp-config.php
+ * @link https://codex.wordpress.org/zh-cn:%E7%BC%96%E8%BE%91_wp-config.php
  *
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
+// ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
+/** WordPress数据库的名称 */
 define('DB_NAME', 'wordpress');
 
-/** MySQL database username */
+/** MySQL数据库用户名 */
 define('DB_USER', 'root');
 
-/** MySQL database password */
+/** MySQL数据库密码 */
 define('DB_PASSWORD', 'root');
 
-/** MySQL hostname */
+/** MySQL主机 */
 define('DB_HOST', 'mysql');
 
-/** Database Charset to use in creating database tables. */
+/** 创建数据表时默认的文字编码 */
 define('DB_CHARSET', 'utf8');
 
-/** The Database Collate type. Don't change this if in doubt. */
+/** 数据库整理类型。如不确定请勿更改 */
 define('DB_COLLATE', '');
 
 /**#@+
- * Authentication Unique Keys and Salts.
+ * 身份认证密钥与盐。
  *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ * 修改为任意独一无二的字串！
+ * 或者直接访问{@link https://api.wordpress.org/secret-key/1.1/salt/
+ * WordPress.org密钥生成服务}
+ * 任何修改都会导致所有cookies失效，所有用户将必须重新登录。
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '8427ca8c7a1c332df86e8f5d1652c6c1033d4606');
-define('SECURE_AUTH_KEY',  'ff56b1d34d43f61bf4eeb8d2984a175551d99dec');
-define('LOGGED_IN_KEY',    '22b19acfc4881365daa1689ecc264eee7f5557c0');
-define('NONCE_KEY',        '0bbd689b45057e9bcc0f6bd73378f1b1241aad9b');
-define('AUTH_SALT',        '276ac30dfa0a48f520e607eaf8b52164bbf02720');
-define('SECURE_AUTH_SALT', 'fe42fe7efbfdd522f95aba3bdb0c34473fd2b95e');
-define('LOGGED_IN_SALT',   '3fa66c6636e745a26c211aa515261f36b73d42d8');
-define('NONCE_SALT',       '6e19d76dc8fe6a61126ffdbb645a896640f38957');
+define('AUTH_KEY',         'w&@N/b-G_57D%21UvF( .U_}d1~_p#RrbJBhd1QRYU71Jh+|rJOTrzG&qTMhSr<`');
+define('SECURE_AUTH_KEY',  'Cx0lNzb6U)dZicXjHC:0urXv_o=o:A&OM9L>J6~b#&5C?Tn4NWT@lr#z]@F}rN2j');
+define('LOGGED_IN_KEY',    '_UM[UeCmNA,2CA{UQ(tG<uLV|pJ`R(pxdc?7E)*S|zy^gFhhgs>yD.@@BA`p,E_b');
+define('NONCE_KEY',        'Eil=Iu6^FN7@cT0Ei&ly$TN}spYD:L(W2{,}l.T=yeVd~(uRts*(VxM*Zoe;Ak2,');
+define('AUTH_SALT',        'z&&F3z$nIm$.|@T=n#THA)|Z.+,cvo{MtEIB0({uv{zjtp*LyU41*RhFV27PhVMd');
+define('SECURE_AUTH_SALT', 'f:FaK|8hE&bbO;Kb_~~IyB&wKT(qQ>MoS]#5kuQM9t/C0C`oV+JKJ8Je#//6`@Xe');
+define('LOGGED_IN_SALT',   'WLckcgp]0[4Gn4oLE9w:{3W-PG^{ycbx%jA`dHbL9]oCtysVP~#X3Dgsj]mt}yd%');
+define('NONCE_SALT',       'U{vo!*kc#L%]kWuB NZ>%wkh3QQ;n$O<ePNPzeWKOZQQ)~}e=NO%D*HQb=rP#!wf');
 
 /**#@-*/
 
 /**
- * WordPress Database Table prefix.
+ * WordPress数据表前缀。
  *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
+ * 如果您有在同一数据库内安装多个WordPress的需求，请为每个WordPress设置
+ * 不同的数据表前缀。前缀名只能为数字、字母加下划线。
  */
 $table_prefix  = 'wp_';
 
 /**
- * For developers: WordPress debugging mode.
+ * 开发者专用：WordPress调试模式。
  *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
+ * 将这个值改为true，WordPress将显示所有用于开发的提示。
+ * 强烈建议插件开发者在开发环境中启用WP_DEBUG。
  *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
+ * 要获取其他能用于调试的信息，请访问Codex。
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
 
-// If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
-// see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
-	$_SERVER['HTTPS'] = 'on';
-}
+/**
+ * zh_CN本地化设置：启用ICP备案号显示
+ *
+ * 可在设置→常规中修改。
+ * 如需禁用，请移除或注释掉本行。
+ */
+define('WP_ZH_CN_ICP_NUM', true);
 
-/* That's all, stop editing! Happy blogging. */
+/* 好了！请不要再继续编辑。请保存本文件。使用愉快！ */
 
-/** Absolute path to the WordPress directory. */
+/** WordPress目录的绝对路径。 */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
-/** Sets up WordPress vars and included files. */
+/** 设置WordPress变量和包含文件。 */
 require_once(ABSPATH . 'wp-settings.php');
