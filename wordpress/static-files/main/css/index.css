@@ -1,0 +1,9 @@
+.site-header .navbar.navbar-default { background-color: #363636; font-family: 'Open Sans', serif; margin-bottom: 0; font-weight: 500; }
+.site-header .navbar.navbar-default .site-navigation-inner #logo .site-name { position: relative; overflow: hidden; margin: 10px 0; }
+@media (max-width: 768px) { .site-header .navbar.navbar-default .site-navigation-inner #logo .site-name { margin: 0; } }
+.site-header .navbar.navbar-default .site-navigation-inner #logo .site-name .navbar-brand { color: #dadada; font-size: 20px; font-family: 'Roboto Slab', serif; }
+@media (max-width: 767px) { .site-header .navbar.navbar-default .site-navigation-inner #logo .site-name .navbar-brand { margin: 0; } }
+
+body { background-color: #fff; }
+
+.main-content-area { margin-top: 40px; margin-bottom: 40px; }

@@ -1,0 +1,35 @@
+.site-header {
+
+    .navbar.navbar-default {
+        background-color: #363636;
+        font-family: 'Open Sans', serif;
+        margin-bottom: 0;
+        font-weight: 500;
+
+        .site-navigation-inner {
+
+            #logo {
+
+                .site-name {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 10px 0;
+                    @media (max-width: 768px) {
+                        margin: 0;
+                    }
+
+                    .navbar-brand {
+                        color: #dadada;
+                        font-size: 20px;
+                        font-family: 'Roboto Slab', serif;
+
+                        @media (max-width: 767px) {
+                            margin: 0;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
